@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hikmal Firmansyah</title>
+  <style>
+    body {
+      max-width: 720px;
+      margin: 48px auto;
+      padding: 24px;
+      background-color: #f0f7ff;
+      color: #233044;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #1769aa;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 6px;
+      background-color: #1769aa;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #125487;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hikmal Firmansyah</h1>
+    <p>Halo! Selamat datang di halaman sederhana saya.</p>
+    <p>Saya sedang belajar membuat halaman web menggunakan HTML, CSS, dan JavaScript.</p>
+    <p>Halaman ini memiliki desain sederhana dan sebuah tombol interaktif.</p>
+    <button id="waktuButton" type="button">Tampilkan tanggal dan waktu</button>
+    <p id="waktu" aria-live="polite"></p>
+  </main>
+
+  <script>
+    document.getElementById("waktuButton").addEventListener("click", function () {
+      document.getElementById("waktu").textContent =
+        "Tanggal dan waktu saat ini: " + new Date().toLocaleString("id-ID");
+    });
+  </script>
+</body>
+</html>
